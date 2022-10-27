@@ -1,9 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculadoraActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:text="Mi Calculadora"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:padding="20dp"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="409dp"
+        android:layout_height="88dp"
+        android:layout_below="@+id/text1"
+        android:layout_margin="8dp"
+        android:paddingLeft="30dp"
+        android:text="Bienvenidos a mi APP Calculadora"
+        android:textColor="@color/black"
+        android:textSize="34sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/images"
+        android:layout_below="@+id/text2"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/text_num1"
+        android:layout_width="408dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:autoText="false"
+        android:paddingLeft="30dp"
+        android:text="Introduzca el primer numero"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textIsSelectable="false" />
+
+    <EditText
+        android:id="@+id/Num_1"
+        android:layout_width="315dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/text_num1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="number"
+        android:text=""
+        android:hint="Number 1"/>
+
+    <TextView
+        android:id="@+id/text_num2"
+        android:layout_width="408dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/Num_1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:autoText="false"
+        android:paddingLeft="30dp"
+        android:text="Introduzca el segundo numero"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textIsSelectable="false" />
+
+    <EditText
+        android:id="@+id/Num_2"
+        android:layout_width="315dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/text_num2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="number"
+        android:text=""
+        android:hint="Number 2"/>
+
+    <LinearLayout
+        android:id="@+id/Botones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Num_2"
+        android:layout_margin="8dp">
+
+
+        <Button
+            android:id="@+id/Sumar"
+            android:layout_width="79dp"
+            android:layout_height="49dp"
+            android:layout_margin="8dp"
+            android:insetBottom="5dp"
+            android:text="Sumar"
+            android:textSize="10sp" />
+
+
+        <Button
+            android:id="@+id/Restar"
+            android:layout_width="79dp"
+            android:layout_height="49dp"
+            android:layout_margin="8dp"
+            android:insetBottom="5dp"
+            android:text="Restar"
+            android:textSize="10sp" />
+
+
+        <Button
+            android:id="@+id/Multiplicar"
+            android:layout_width="79dp"
+            android:layout_height="49dp"
+            android:layout_margin="8dp"
+            android:insetBottom="5dp"
+            android:text="Mult"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/Dividir"
+            android:layout_width="79dp"
+            android:layout_height="49dp"
+            android:layout_margin="8dp"
+            android:insetBottom="5dp"
+            android:text="Dividir"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_num3"
+            android:layout_width="408dp"
+            android:layout_height="30dp"
+            android:autoText="false"
+            android:paddingLeft="30dp"
+            android:text="El resultado de la operacion es:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/Botones"
+            android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/text_resp"
+        android:layout_width="408dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/text_num3"
+        android:layout_margin="8dp"
+        android:autoText="false"
+        android:paddingLeft="30dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textIsSelectable="false" />
+
+</RelativeLayout>
